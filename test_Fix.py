@@ -8,7 +8,7 @@ def driver():
     driver = webdriver.Chrome()
     driver.implicitly_wait(5)
     yield driver
-    #driver.quit()
+    driver.quit()
 
 # Provide multiple sets of username/password
 @pytest.mark.parametrize("username,password", [
